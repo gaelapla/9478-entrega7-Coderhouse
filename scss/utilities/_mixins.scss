@@ -1,0 +1,21 @@
+@use 'variables' as *;
+
+@mixin desktop {
+  @media (min-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin mobile-chico {
+  @media (max-width: 480px) {
+    @content;
+  }
+}
+
+@mixin hover-elevar {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  &:hover {
+    transform: translateY(-6px);
+    box-shadow: $sombra-hover;
+  }
+}
